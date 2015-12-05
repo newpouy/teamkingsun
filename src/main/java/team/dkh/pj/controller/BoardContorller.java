@@ -25,7 +25,6 @@ public class BoardContorller {
 		@RequestMapping(value="/boardList", method=RequestMethod.GET)
 		public String getBoardList(Model model) {
 			 List<Map<String, Object>> boardList = boardService.getBoardList();
-			System.out.println("sysout");
 			logger.debug("boardList size: "+String.valueOf(boardList.size()));
 			model.addAttribute("boardList", boardList);
 			return "boardList";
@@ -33,9 +32,9 @@ public class BoardContorller {
 		
 		@RequestMapping(value="/board/{boardId}", method=RequestMethod.GET)
 		public String getBoard(Model model, @PathVariable int boardId) {
-			System.out.println("dfafdsfa");
 			BoardVo boardVo = boardService.getBoardOne(boardId);
-			logger.debug(boardVo.toString());
-			return "boardList";
+			logger.debug("boardVo: "+boardVo.toString());
+			model.addAttribute("boardOne", boardVo);
+			return "boardOne";
 		}
 }

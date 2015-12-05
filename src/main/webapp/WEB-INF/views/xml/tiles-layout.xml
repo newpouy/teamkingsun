@@ -18,4 +18,8 @@
 	<definition name="boardList" extends="default">
 		<put-attribute name="body" value="/WEB-INF/views/board/boardList.jsp"/>
 	</definition>
+	
+		<definition name="boardOne" extends="default">
+		<put-attribute name="body" value="/WEB-INF/views/board/boardOne.jsp"/>
+	</definition>
 </tiles-definitions>
