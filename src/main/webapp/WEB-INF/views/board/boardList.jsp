@@ -1,15 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<title>first</title>
+<%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-</head>
-<body>
-<tiles:insertAttribute name="header" />
-<h2>게시판 목록</h2>
-
+<h2>게시판 목록1111</h2>
 <table style="border:1px solid #ccc">
     <colgroup>
         <col width="10%"/>
@@ -40,7 +33,3 @@
          
     </tbody>
 </table>
-<c:out value="${boardList}"/>
-<tiles:insertAttribute name="footer" />
-</body>
-</html>
