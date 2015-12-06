@@ -40,4 +40,34 @@
 				boardId = #{boardId}
 		]]>
 	</select>
+	
+	<insert id="insertBoard" parameterType="team.dkh.pj.domain.BoardVo">
+		<![CDATA[
+			INSERT INTO board (
+				parentId,
+				writer,
+				title,
+				content)
+			VALUES (
+				IFNULL(#{parentId},DEFAULT(parentId)),
+				#{writer},
+				#{title},
+				#{content}
+			)
+		]]>	
+	</insert>
+	
+	<update id="updateBoard" parameterType="team.dkh.pj.domain.BoardVo">
+		<![CDATA[
+			UPDATE board 
+			SET 
+				boardId = #{boardId},
+				parentId = #{parentId},
+				writer = #{writer},
+				title = #{title},
+				content = #{content}
+			WHERE
+				boardId = #{boardId}
+		]]>
+	</update>
 </mapper>

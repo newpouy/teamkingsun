@@ -13,4 +13,6 @@ public interface BoardService {
 	
 	public List<Map<String, Object>> getBoardList();
 	public BoardVo getBoardOne(int boardId);
+	public int writeBoard(BoardVo boardVo);
+	public int modifyBoard(BoardVo boardVo);
 }

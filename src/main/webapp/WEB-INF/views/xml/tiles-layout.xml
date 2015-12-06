@@ -18,8 +18,13 @@
 	<definition name="boardList" extends="default">
 		<put-attribute name="body" value="/WEB-INF/views/board/boardList.jsp"/>
 	</definition>
-	
-		<definition name="boardOne" extends="default">
+	<definition name="boardOne" extends="default">
 		<put-attribute name="body" value="/WEB-INF/views/board/boardOne.jsp"/>
+	</definition>
+	<definition name="boardWriteView" extends="default">
+		<put-attribute name="body" value="/WEB-INF/views/board/boardWriteView.jsp"/>
+	</definition>
+	<definition name="boardModifyView" extends="default">
+		<put-attribute name="body" value="/WEB-INF/views/board/boardModifyView.jsp"/>
 	</definition>
 </tiles-definitions>

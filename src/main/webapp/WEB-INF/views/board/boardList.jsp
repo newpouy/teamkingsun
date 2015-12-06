@@ -4,18 +4,18 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <h2>게시판 목록1111</h2>
 <table style="border:1px solid #ccc">
-    <colgroup>
+<%--     <colgroup>
         <col width="10%"/>
-        <col width="*"/>
+        <col width=""/>
         <col width="15%"/>
         <col width="20%"/>
-    </colgroup>
+    </colgroup> --%>
     <thead>
         <tr>
             <th scope="col">글번호</th>
             <th scope="col">제목</th>
-            <th scope="col">조회수</th>
-            <th scope="col">작성일</th>
+            <th scope="col">작성자</th>
+			 <th scope="col">작성일</th>
         </tr>
     </thead>
     <tbody>
@@ -23,8 +23,8 @@
                     <tr>
                         <td>${row.boardId }</td>
                         <td>${row.title }</td>
-                        <td>${row.writer }</td>
-                        <td>${row.content }</td>
+                        <td><a href="<c:url value="/board/${row.boardId}"/>">${row.writer }</a></td>
+							<td>${row.regDate }</td>
                     </tr>
                 </c:forEach></c:when><c:otherwise>
                 <tr>
@@ -33,3 +33,4 @@
          
     </tbody>
 </table>
+<a href="<c:url value="/boardWriteView"/>">글쓰기</a>

@@ -2,9 +2,9 @@
 <%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-${boardOne.boardId}<br/>
-${boardOne.title}<br/>
-${boardOne.writer}<br/>
-${boardOne.content}<br/>
-<input type="button" value="수정" onclick='location.href="<c:url value="/boardModifyView/${boardOne.boardId}"/>"'><br/>
-<a href="<c:url value="/boardList"/>">목록보기</a>
+<form method="post" action="/dkh/boardWrite} }">
+	<input id="writer" name="writer">
+	<input type="text" id="title" name="title">
+	<textarea id="content" name="content"></textarea>
+	<input type="submit">
+</form>

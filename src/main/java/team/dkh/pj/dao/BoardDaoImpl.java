@@ -35,15 +35,15 @@ public class BoardDaoImpl implements BoardDao {
 	}
 
 	@Override
-	public BoardVo insertBoard(BoardVo boardVo) {
+	public int insertBoard(BoardVo boardVo) {
 		// TODO Auto-generated method stub
-		return null;
+		return sqlSession.insert("insertBoard", boardVo);
 	}
 
 	@Override
-	public BoardVo updateBoard(BoardVo boardVo) {
+	public int updateBoard(BoardVo boardVo) {
 		// TODO Auto-generated method stub
-		return null;
+		return sqlSession.update("updateBoard", boardVo);
 	}
 
 	@Override

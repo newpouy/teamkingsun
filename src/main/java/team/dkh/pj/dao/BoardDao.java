@@ -9,8 +9,8 @@ public interface BoardDao {
 	
 	public  List<Map<String, Object>> selectBoardList();
 	public BoardVo selectBoard(int boardId);
-	public BoardVo insertBoard(BoardVo boardVo);
-	public BoardVo updateBoard(BoardVo boardVo);
+	public int insertBoard(BoardVo boardVo);
+	public int updateBoard(BoardVo boardVo);
 	public BoardVo deleteBoard(int boardId);
 	
 }
