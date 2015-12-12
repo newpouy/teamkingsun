@@ -1,9 +1,16 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <p>menu</p>
-<body>
-<label for="gender"> 성별 : </label>
-<input type="radio" id="gender" name="gender" value="남자" checked>남자
-<input type="radio" id="gender" name="gender" value="여자">여자<br><br>
-</body>
+<%-- <sec:authentication property="${SPRING_SECURITY_CONTEXT} "/> --%>
+${sessionScope.userLoginInfo.username} 
+<sec:authorize access="isAnonymous()">
+<a href="/dkh/login">Login</a>
+</sec:authorize>
+
+<sec:authorize access="hasRole('ROLE_USER')">
+<%-- <c:out value="${sessionScope}"></c:out> --%>
+<c:out value="${sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal}"></c:out>님 환영합니다.<br/>
+<a href="/dkh/logout">Logout</a>
+</sec:authorize>

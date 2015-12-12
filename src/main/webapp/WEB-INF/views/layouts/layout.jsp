@@ -11,7 +11,6 @@
 <body>
 <tiles:insertAttribute name="menu" />
 <tiles:insertAttribute name="body" />
-<c:out value="${boardList}"/>
 <tiles:insertAttribute name="footer" />
 </body>
 </html>

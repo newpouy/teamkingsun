@@ -25,6 +25,12 @@ public class BoardContorller {
 		@Autowired
 		BoardService boardService;
 		
+		@RequestMapping(value="/", method=RequestMethod.GET)
+		public String main(Model model) {
+			logger.debug("boardList: "+boardService.getBoardList().toString());
+			model.addAttribute("boardList", boardService.getBoardList());
+			return "boardList";
+		}
 		@RequestMapping(value="/boardList", method=RequestMethod.GET)
 		public String getBoardList(Model model) {
 			logger.debug("boardList: "+boardService.getBoardList().toString());

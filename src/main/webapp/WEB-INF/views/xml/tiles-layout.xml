@@ -14,7 +14,9 @@
 	<definition name="test/*" extends="default">
 	 	<put-attribute name="body" value="/WEB-INF/views/test/{1}.jsp" />
 	</definition>
-	
+	<definition name="login" extends="default">
+	 	<put-attribute name="body" value="/WEB-INF/views/login.jsp" />
+	</definition>
 	<definition name="boardList" extends="default">
 		<put-attribute name="body" value="/WEB-INF/views/board/boardList.jsp"/>
 	</definition>
