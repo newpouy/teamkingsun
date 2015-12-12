@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
-<input type="button" id="testBtn" onclick="alert('hihi')">
+<input type="button" id="testBtn" onclick="alert('hihihihihiihii')">
 <h2>게시판 목록1111</h2>
 <table style="border:1px solid #ccc">
 <%--     <colgroup>
