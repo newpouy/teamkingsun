@@ -22,12 +22,21 @@
     </security:http>
  
  <bean class="org.springframework.security.web.access.expression.DefaultWebSecurityExpressionHandler"/>
+
+ <bean id="userService" class="team.dkh.pj.service.UserDetailsServiceImpl"/>
  
+ <security:authentication-manager>  
+  <security:authentication-provider user-service-ref="userService">
+  </security:authentication-provider>
+ </security:authentication-manager> 
+
+<!--
  <security:authentication-manager>
 	    <security:authentication-provider ref="customAuthenticationProvider"/>
 	</security:authentication-manager>	
     
     <bean id="customAuthenticationProvider" class="team.dkh.pj.security.CustomAuthenticationProvider"/>
+  --> 
     <!-- <security:authentication-manager>
         <security:authentication-provider>
             <security:user-service>
